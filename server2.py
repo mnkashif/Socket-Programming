@@ -107,9 +107,12 @@ def thread_function():
                             Marks[t]=Marks[t]+1
                             conn_name.send(str.encode("Correct Answer, You get 1 Point"))
                             if Marks[t]==4:
+                                   
                                 for c in all_connections:
                                     c.send(str.encode("Hi"))
                                     time.sleep(1)
+
+                                
                                 break
                         else:
                             conn_name.send(str.encode("Wrong Answer, You get 0 Points"))

@@ -19,7 +19,7 @@ a=str(s.recv(1024),"utf-8")
 print(a)
 y=str(s.recv(1024),"utf-8")
 print(y)
-while (k<p):
+while (k<=p):
      
     data = str(s.recv(1024),"utf-8")
     if data=="Hi":
@@ -42,8 +42,11 @@ while (k<p):
         time.sleep(1)
         s.send(str.encode(ans))
         k=k+1
+        
+        
         rep=str(s.recv(1024),"utf-8")
         print(rep)
+        
     
 data3=str(s.recv(1024),"utf-8")
 print(data3)
